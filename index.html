@@ -7,18 +7,52 @@
     <title>Trivia Game</title>
     <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--JavaScript-->
+    <script src="assets/javascript/app.js"></script>
     <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--FONT link-->
+    <link href="https://fonts.googleapis.com/css?family=Sintony" rel="stylesheet">
+
 
 </head>
 
 <body>
 
+<div id="container">
 <h1>New Jersey Devils Trivia</h1>
+
 
 <div id="logo">
 <img id="devils" src="assets/images/devils.jpg">
 </div>
+
+<div id = "game-instructions">
+      <h3>Instructions:</h3>
+      <p>Answer the questions below!</p>
+      
+    </div>
+
+  <h1>Time Remaining: <span id="time-remaining"></span></h1>
+
+  <!-- Note that this div is now empty. We will fill it dynamically -->
+  <div id="questions">
+  </div>
+
+ 
+
+      <div id = "grade">
+      <div>
+      <h1>Results:</h1>
+        <!--<h3>Wins: 0</h3>-->
+        <span id="correct"><h3>Correct: 0</h3></span>
+      </div>
+      <div>
+        <!--<h3>Losses: 0</h3>-->
+        <span id="incorrect"><h3>Incorrect: 0</h3></span>
+      </div>
+      </div>
+</div>      
 
 
 </body>
