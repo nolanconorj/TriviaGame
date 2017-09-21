@@ -13,25 +13,25 @@ body {
 }
 h1 {
 	color: red;
-	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
 	text-align: center;
 	font-size: 50px;
-	margin-top: -8px;
+	margin-top: 50px;
     padding-top: 10px;
 }
 
 #devils {
-	height: 200px;
-	width: 300px;
+	height: 180px;
+	width: 400px;
+	margin-top: 10px;
 
 }
 
 #logo {
 	margin: auto;
     width: 60%;
-    border: 1px solid black;
-    height: 200px;
-	width: 300px;
+    height: 180px;
+	width: 400px;
     
 }
 
@@ -45,4 +45,29 @@ h3 {
 p {
 	color: black;
 	text-align: center;
+}
+
+.min-sec{
+	text-align: center;
+	width: 60px;
+}
+
+table{
+	color: red;
+	text-shadow: -1px 0 black, 0 2px black, 2px 0 black, 0 -1px black;
+	text-align: center;
+	font-size: 50px;
+}
+
+#time {
+	margin: auto;
+}
+
+#startButton{
+	height: 50px;
+	width: 100px;
+	margin-bottom: 20px;
+	color: red;
+	font-family: 'Sintony', sans-serif;
+	font-size: 20px;
 }

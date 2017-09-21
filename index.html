@@ -19,31 +19,65 @@
 
 <body>
 
+
 <div id="container">
-<h1>New Jersey Devils Trivia</h1>
+
 
 
 <div id="logo">
-<img id="devils" src="assets/images/devils.jpg">
+<img id="devils" src="assets/images/devilslogo.gif">
 </div>
 
+<h1>New Jersey Devils Trivia Game</h1>
+
+<!--START BUTTON-->
+<button type="button" id="startButton">Start!</button>
+
+
+<div id="container2" style="display: none;">
 <div id = "game-instructions">
       <h3>Instructions:</h3>
-      <p>Answer the questions below!</p>
+      <p>Answer the true/false questions below. You only have 90 seconds! Hurry up!</p>
       
     </div>
 
-  <h1>Time Remaining: <span id="time-remaining"></span></h1>
+<!--TIMER-->
+<div id="time">
+<table align="center">
+	<tbody>
+		<tr>
+			<td>
+			<span id="time-remaining"></span>
+			</td>
+		</tr>
+  	</tbody>
+</table>
+</div>
 
   <!-- Note that this div is now empty. We will fill it dynamically -->
-  <div id="questions">
+  <div class="questions">
+  <div class="questions" id="question-1">
+  <p>The New Jersey Devils franchise has won 3 Stanley Cups.</p>
+  </div>
+
+  <div class="questions" id="question-2">
+  <p>New Jersey Devils great, goalie Martin Brodeur, wore the number 32 throughout his entire playing career.</p>
+  </div>
+
+  <div class="questions" id="question-3">
+  <p>The New Jersey Devils franchise was previously known as the Colorado Rockies before moving to New Jersey in 1982.</p>
+  </div>
+
+<!--SUBMIT BUTTON-->
+<button id="submit">Submit</button>
+
   </div>
 
  
 
       <div id = "grade">
-      <div>
       <h1>Results:</h1>
+      <div>
         <!--<h3>Wins: 0</h3>-->
         <span id="correct"><h3>Correct: 0</h3></span>
       </div>
@@ -51,7 +85,14 @@
         <!--<h3>Losses: 0</h3>-->
         <span id="incorrect"><h3>Incorrect: 0</h3></span>
       </div>
+      <div>
+        <!--<h3>Unanswered: 0</h3>-->
+        <span id="unanswered"><h3>Unanswered: 0</h3></span>
       </div>
+      </div>
+
+<!--DONE BUTTON-->      
+</div>
 </div>      
 
 
