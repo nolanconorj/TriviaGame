@@ -2,8 +2,7 @@
 <html lang="en-us">
 
 <head>
-
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <title>Trivia Game</title>
     <!--<link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -13,89 +12,118 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <!--FONT link-->
     <link href="https://fonts.googleapis.com/css?family=Sintony" rel="stylesheet">
-
-
 </head>
 
 <body>
+    <div id="container">
+        <div id="logo">
+            <img id="devils" src="assets/images/devilslogo.gif">
+        </div>
+        <h1>New Jersey Devils Trivia Game</h1>
 
+        <div id="game-instructions">
+                <h3>Instructions:</h3>
+                <p>Press the start button to begin! You will have 90 seconds to answer the True/False questions provided. Good luck!</p>
+                
+            </div>
+        <!--START BUTTON-->
+        <button type="button" id="startButton">Start!</button>
+        
 
-<div id="container">
-
-
-
-<div id="logo">
-<img id="devils" src="assets/images/devilslogo.gif">
-</div>
-
-<h1>New Jersey Devils Trivia Game</h1>
-
-<!--START BUTTON-->
-<button type="button" id="startButton">Start!</button>
-
-
-<div id="container2" style="display: none;">
-<div id = "game-instructions">
-      <h3>Instructions:</h3>
-      <p>Answer the true/false questions below. You only have 90 seconds! Hurry up!</p>
-      
-    </div>
-
-<!--TIMER-->
-<div id="time">
-<table align="center">
-	<tbody>
-		<tr>
-			<td>
-			<span id="time-remaining"></span>
-			</td>
-		</tr>
-  	</tbody>
-</table>
-</div>
-
-  <!-- Note that this div is now empty. We will fill it dynamically -->
-  <div class="questions">
-  <div class="questions" id="question-1">
-  <p>The New Jersey Devils franchise has won 3 Stanley Cups.</p>
-  </div>
-
-  <div class="questions" id="question-2">
-  <p>New Jersey Devils great, goalie Martin Brodeur, wore the number 32 throughout his entire playing career.</p>
-  </div>
-
-  <div class="questions" id="question-3">
-  <p>The New Jersey Devils franchise was previously known as the Colorado Rockies before moving to New Jersey in 1982.</p>
-  </div>
-
-<!--SUBMIT BUTTON-->
-<button id="submit">Submit</button>
-
-  </div>
-
- 
-
-      <div id = "grade">
-      <h1>Results:</h1>
-      <div>
-        <!--<h3>Wins: 0</h3>-->
-        <span id="correct"><h3>Correct: 0</h3></span>
-      </div>
-      <div>
-        <!--<h3>Losses: 0</h3>-->
-        <span id="incorrect"><h3>Incorrect: 0</h3></span>
-      </div>
-      <div>
-        <!--<h3>Unanswered: 0</h3>-->
-        <span id="unanswered"><h3>Unanswered: 0</h3></span>
-      </div>
-      </div>
-
-<!--DONE BUTTON-->      
-</div>
-</div>      
-
-
+        <div id="container2" style="display: none;">
+            
+            <!--TIMER-->
+            <div id="time">
+                <table align="center">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <span id="time-remaining"></span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- QUESTIONS -->
+            <div class="questions">
+                <div class="question" id="question-one">
+                    <div class="answers">
+                        <h4>1. The New Jersey Devils franchise has won 3 Stanley Cups.</h4>
+                        <input type="radio" name="q1" data-type="1"> True
+                        <br>
+                        <input type="radio" name="q1" data-type="0"> False
+                        <br>
+                    </div>
+                </div>
+                <div class="question" id="question-two">
+                    <form action="">
+                        <div class="answers">
+                            <h4>2. New Jersey Devils great, goalie Martin Brodeur, wore the number 32 throughout his entire playing career.</h4>
+                            <input type="radio" name="question-2" value="true" data-type="0"> True
+                            <br>
+                            <input type="radio" name="question-2" value="false" data-type="1"> False
+                            <br>
+                    </form>
+                    </div>
+                </div>
+                <div class="question" id="question-three">
+                    <form action="">
+                        <div class="answers">
+                            <h4>3. The New Jersey Devils franchise was previously known as the Colorado Rockies before moving to New Jersey in 1982.</h4>
+                            <input type="radio" name="question-3" value="true" data-type="1"> True
+                            <br>
+                            <input type="radio" name="question-3" value="false" data-type="0"> False
+                            <br>
+                    </form>
+                    </div>
+                </div>
+                <div class="question" id="question-four">
+                    <form action="">
+                        <div class="answers">
+                            <h4>4. The Devils infamous "Crash Line" of the mid 90s consisted of Bobby Holik, Randy McKay, and Mike Peluso.</h4>
+                            <input type="radio" name="question-4" value="true" data-type="1"> True
+                            <br>
+                            <input type="radio" name="question-4" value="false" data-type="0"> False
+                            <br>
+                    </form>
+                    </div>
+                </div>
+                <div class="question" id="question-five">
+                    <form action="">
+                        <div class="answers">
+                            <h4>5. The Devils are the only team in the NHL without an alternate jersey.</h4>
+                            <input type="radio" name="question-5" value="true" data-type="0"> True
+                            <br>
+                            <input type="radio" name="question-5" value="false" data-type="1"> False
+                            <br>
+                    </form>
+                    </div>
+                </div>
+                <div class="question" id="question-six">
+                    <form action="">
+                        <div class="answers">
+                            <h4>6. Zach Parise and Ilya Kovalchuck are both back stabbing mommas boys.</h4>
+                            <input type="radio" name="question-6" value="true" data-type="1"> True
+                            <br>
+                            <input type="radio" name="question-6" value="false" data-type="0"> False
+                            <br>
+                    </form>
+                    </div>
+                </div>
+                <!--RESULTS-->
+                <div id="grade" style="display: none;">
+                    <h1>Results:</h1>
+                    <div class="results">
+                        <!--<h3>Wins: 0</h3>-->
+                        <span id="correct">Correct: 0</h3></span>
+                    </div>
+                    <div class="results">
+                        <!--<h3>Losses: 0</h3>-->
+                        <span id="incorrect">Incorrect: 0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 </body>
 
 </html>

@@ -6,6 +6,10 @@ body {
 	font-family: 'Sintony', sans-serif;
 }
 
+span {
+
+}
+
 #container {
 	margin: auto;
 	width: 80%;
@@ -42,9 +46,26 @@ h3 {
     padding-bottom: 30px;
 }
 
+.results {
+	color: black;
+	text-align: center;
+	font-size: 30px;
+	margin-bottom: 0px;
+    padding-bottom: 20px;
+
+}
+
+h4 {
+	color: black;
+	text-align: center;
+	margin-bottom: 0px;
+
+}
+
 p {
 	color: black;
 	text-align: center;
+	padding-bottom: 30px;
 }
 
 .min-sec{
@@ -64,10 +85,11 @@ table{
 }
 
 #startButton{
-	height: 50px;
-	width: 100px;
-	margin-bottom: 20px;
-	color: red;
-	font-family: 'Sintony', sans-serif;
-	font-size: 20px;
+	height: 100px;
+    width: 200px;
+    margin-bottom: 20px;
+    color: red;
+    font-family: 'Sintony', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
 }

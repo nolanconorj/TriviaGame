@@ -1,19 +1,61 @@
 //when the webpage is loaded
-/*jQuery(document).ready(function($) {
-	alert("js is working");
-});*/
-
 
 $(document).ready( function () {
-//  $("#container2").hide();
-	$("#startButton").click(function(){
+
+
+	$("#startButton").on("click", function(){
 		$("#container2").css("display", "unset");
+		$("#grade").css("display", "unset");
+		$("#startButton").css("display", "none");
+
 
 run();
-		
+
+
+	
+	$('.answers input[type="radio"]').click(function(){
+		var radioName = $(this).attr("name"); //Get radio name
+   $(":radio[name='"+radioName+"']").attr("disabled", true);
+    
+    var type = $(this).data('type'),
+        correctAnswerCount = 
+            $('.answers input[type="radio"]:checked[data-type="1"]').length;
+    
+    
+    
+    console.log('correctAnswerCount:', correctAnswerCount);
+    
+    if (type === 1) {
+      $("#correct").html("Correct: " + correct++);
+      
+    
+    }
+
+    else if (type === 0) {
+      $("#incorrect").html("Incorrect: " + incorrect++);
+    }
+
+    if (correct + incorrect === 8){
+	alert("Game Over! Check your results below.");
+	stop();
+}
+
+});	
 	});
 });
 
+
+
+//submitButton.addEventListener('click', grade);
+
+
+//SCORE KEEPER VARIABLES
+var correct = 1;
+    var incorrect = 1;
+    
+
+
+    
 
 //THE TIMER CODE
 		//  Interval 
@@ -46,7 +88,8 @@ run();
         stop();
 
         //  Alert the user that time is up.
-        alert("Time Up!");
+        alert("Time is Up!");
+
       }
     }
 
@@ -59,9 +102,15 @@ run();
       clearInterval(intervalId);
     }
 
-   
-    
+/*IN CLASS EX
+   var q = {
+   	question: "THis is a question?",
+   	answers: ["1", "2", "3", "4"],
+   	correctIndex: 1
+   }
 
+   $("#questions").html(q.question)
 
-    // on submit, show results
-//submitButton.addEventListener('click', showResults);
+   for (var i = 0; i<4; i++)
+   		$("#answers").append("<div id='answer-'"+i+" data-answer-index= " + i + q.answers[i] + "</div>" )*/
+  
